@@ -23,6 +23,8 @@
       let newWord;
 
       const onClickButton = () => {
+        console.log(word)
+        console.log(newWord)
         if(newWord.length === 3 && (!word || word[word.length - 1] === newWord[0])){
           word = newWord;
           $word.textContent = word;
@@ -35,10 +37,12 @@
           
         } else {
             alert('올바르지 않은 단어입니다');
-          }
+        }
+          newWord = "";
           $input.value = '';
           $input.focus();
       };
+
       const onInput = (event) => {
         newWord = event.target.value;
       };
