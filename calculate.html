@@ -36,6 +36,10 @@
 <body>
   <input readonly id="operator">
   <input readonly type="text" id="result">
+  <button id="soonje">soonje</button>
+  <audio id="audioContainer">
+    <source id="audioSource" src="">
+  </audio>
   <div class="row">
     <button id="num-7">7</button>
     <button id="num-8">8</button>
@@ -174,6 +178,23 @@
       $operator.value = '';
       $result.value = '';
     });
+
+    const audioContainer = document.querySelector('#audioContainer');
+
+    function playAudio(){
+      audioContainer.volume = 0.3;
+      audioContainer.loop = false;
+      audioContainer.play();
+    }
+
+    const sj = ()=>{
+      let source = document.querySelector('#audioSource');
+      source.src = `audio.mp3`;
+      audioContainer.load();
+      playAudio();
+    }
+    document.querySelector('#soonje').addEventListener('click',sj)
+
   </script>
 </body>
 
