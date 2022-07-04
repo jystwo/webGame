@@ -38,7 +38,7 @@
   <input readonly type="text" id="result">
   <button id="soonje">soonje</button>
   <audio id="audioContainer">
-    <source id="audioSource" src="">
+    <source id="audioSource" src="audio/ka.m4a">
   </audio>
   <div class="row">
     <button id="num-7">7</button>
@@ -189,7 +189,7 @@
 
     const sj = ()=>{
       let source = document.querySelector('#audioSource');
-      source.src = `audio.mp3`;
+      source.src = `audio/ka.m4a`;
       audioContainer.load();
       playAudio();
     }
