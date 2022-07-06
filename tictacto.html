@@ -24,12 +24,13 @@
         const $result = document.createElement('div');
         let turn = 'O';
         const rows = [];
+
         const callback = (event)=>{
             if(event.target.textContent){
                 return;
             }    
             event.target.textContent = turn;
-                    turn = turn ==='O' ? 'X' : 'O';
+            turn = turn ==='O' ? 'X' : 'O';
         }
         
         for(let i=0; i<3; i++){
